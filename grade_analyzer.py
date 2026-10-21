@@ -5,7 +5,7 @@ grade_distribution = {
     "C": 0,
     "D": 0,
     "F": 0 
-}
+} # using a dictionary to store the count of each grade
 for score in scores:
     if score >= 90:
         grade = "A"
@@ -17,7 +17,7 @@ for score in scores:
         grade = "D"
     else:       
         grade = "F"
-    grade_distribution[grade] += 1
+    grade_distribution[grade] += 1 #adding the count of each grade to the dictionary
 
 print("=== Grade Analyzer ===")
 print(f"Total scores: {len(scores)}")
@@ -27,7 +27,7 @@ print(f"Lowest: {min(scores)}")
 passing = len(scores) - grade_distribution["F"]
 passing_percentage = (passing / len(scores)) * 100
 print(f"Passing: {passing} ({passing_percentage:.1f}%)")
-failing = len(scores) - passing
+failing = len(scores) - passing # we already have the number of passing students, so we can calculate the number of failing students by subtracting passing from the total number of scores
 failing_percentage = (failing / len(scores)) * 100
 print(f"Failing: {failing} ({failing_percentage:.1f}%)")
 
@@ -43,7 +43,7 @@ while True:
             print(f"\nFinal average: {sum(scores) / len(scores):.1f}")
             break
         new_score = int(user_entry)
-        if new_score >= 0 and new_score <= 100:
+        if new_score >= 0 and new_score <= 100: # assumes aren't accepting scores over 100
             scores.append(new_score)
             print(f"Updated average: {sum(scores) / len(scores):.1f}")
         else:
