@@ -43,7 +43,7 @@ while True:
             print(f"\nFinal average: {sum(scores) / len(scores):.1f}")
             break
         new_score = int(user_entry)
-        if new_score >= 0 and new_score <= 100: # assumes aren't accepting scores over 100
+        if new_score >= 0 and new_score <= 100: # assumes that we aren't accepting scores over 100
             scores.append(new_score)
             print(f"Updated average: {sum(scores) / len(scores):.1f}")
         else:
