@@ -38,8 +38,8 @@ for grade, count in grade_distribution.items():
 print("\n--- Add More Scores ---")
 while True:
     try:
-        user_entry = (input("Enter a new score (or type 'done' to finish): "))
-        if user_entry.lower() == 'done':
+        user_entry = (input("Enter a new score (or type 'done' to finish): ")) # use input without conversion to int, so we can check for 'done' first
+        if user_entry.lower() == 'done': 
             print(f"\nFinal average: {sum(scores) / len(scores):.1f}")
             break
         new_score = int(user_entry)
