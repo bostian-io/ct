@@ -16,7 +16,8 @@ grade_distribution = Counter(get_grade(s) for s in scores)
 
 Counter returns 0 for missing keys, so grade_distribution["F"] is safe even if nobody failed.
 
-❌ This seems more Pythonic, but I don't understand it and know it's not at my level currently, so I won't implement it. It did say earlier in the conversation that my code was already well-constructed in terms of being Pythonic. The major critiques are just how de-constructed everything is, but I would rather leave the code like that while I am learning and only use things like the counter from collections like it suggests when I know it's closer to my level and that I really understand it.
+✅ The review suggested a grading function and `Counter` from `collections`. It seems more Pythonic and like it would be an improvement. It says it's more common. 
+❌ I want to keep the code at a level I understand and can maintain, so I won't implement it. The review said my code was already clean and readable, so leaving it as is is a reasonable choice. I'll revisit this when I'm closer to covering things like `Counter`.
 
 2. Edge cases
 
