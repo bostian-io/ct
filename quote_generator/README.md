@@ -1,6 +1,6 @@
 # Random Quote Generator
 
-A simple Python project that has a has a tuple of 20 quotes and a function to return a quote each time the script runs.
+A simple Python project that has a tuple of 20 quotes and a function to return a quote each time the script runs.
 
 ## Teammate Test Proof
 Check teammate_test.txt for terminal logs for requested proof.
