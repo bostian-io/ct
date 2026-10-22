@@ -64,6 +64,7 @@ with open("sales_report.txt", "w") as file:
     file.write(f"\nTotal revenue: ${total_revenue:.2f}\n")
     file.write(f"Best day: {best_day} with ${best_day_revenue:.2f}\n")
 
+# write formatted summary to a new CSV file
 with open("product_summary.csv", "w", newline="") as file:
     writer = csv.DictWriter(file, fieldnames=["product", "total_quantity", "total_revenue"])
     writer.writeheader()
@@ -71,5 +72,5 @@ with open("product_summary.csv", "w", newline="") as file:
         writer.writerow({
             "product": product,
             "total_quantity": product_quantity[product],
-            "total_revenue": round(product_revenue[product], 2),
+            "total_revenue": round(product_revenue[product], 2), # added rounding to 2 decimal places for better formatting
         })
