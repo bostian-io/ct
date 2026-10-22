@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/p.bos/Documents/ct/venv"
+VIRTUAL_ENV="/Users/p.bos/Documents/ct/quote_generator/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

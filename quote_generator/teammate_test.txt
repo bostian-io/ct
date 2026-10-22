@@ -1,0 +1,17 @@
+# Logs from the "teammate test" as proof that all steps worked successfully! 
+
+(venv) p.bos@Philips-MacBook-Pro quote_generator % deac
+tivate
+p.bos@Philips-MacBook-Pro quote_generator % rm -r venv/
+
+p.bos@Philips-MacBook-Pro quote_generator % python3 -m 
+venv venv
+p.bos@Philips-MacBook-Pro quote_generator % source venv
+/bin/activate
+(venv) p.bos@Philips-MacBook-Pro quote_generator % pip 
+install -r requirements.txt 
+WARNING: You are using pip version 21.2.4; however, version 26.0.1 is available.
+You should consider upgrading via the '/Users/p.bos/Documents/ct/quote_generator/venv/bin/python3 -m pip install --upgrade pip' command.
+(venv) p.bos@Philips-MacBook-Pro quote_generator % python3 quote_generator.py
+Actions speak louder than words.
+(venv) p.bos@Philips-MacBook-Pro quote_generator % touch teammate_test.txt
