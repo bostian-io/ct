@@ -1,11 +1,3 @@
-# takes csv
-# has 5 functions
-# 1. load_students(filepath)
-# 2. calculate_average(grades)
-# 3. get_letter_grade(average)
-# 4. generate_report(students)
-# 5. write_report(report,filepath)
-
 import csv
 
 def load_students(filepath):
