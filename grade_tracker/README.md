@@ -3,7 +3,7 @@
 A Python project which loads a CSV file of student data, computes statistics within the program, and write a formatted summary to a text file.
 
 ## Project Demonstration
-[Grade Tracker Demo](https://cap.so/s/bfb6d2mxm0af1m3)
+[Video Demonstration of the Grade Tracker project](https://cap.so/s/bfb6d2mxm0af1m3)
 
 ## Setup
 
