@@ -46,28 +46,28 @@ def process(data):
 import time
 import random
 
-def count_pairs(data): #quadratic
+def count_pairs(data): # quadratic
     pair_count = 0
     target = 22
     for i in range(len(data)):
-        for j in range(i + 1, len(data)):
-            if data[i] + data[j] == target:
+        for j in range(i + 1, len(data)): # loops through and compares all remaining j to each i in the dataadding to the pair count if any i and j are equal to the target
+            if data[i] + data[j] == target: # adds to the pair count if any i and j are equal to the target
                 pair_count += 1
     return pair_count
 
 
-def count_dict_pairs(data): #linear
-    seen = {}
+def count_dict_pairs(data): # linear
+    seen = {} # capture kv pair (seen:frequency) in dictionary
     pair_count = 0
     target = 22
 
     for i in data:
-        complement = target - i
+        complement = target - i # isolate complementary numbers for creation of target sum pairs
 
         if complement in seen:
-            pair_count += seen[complement]
+            pair_count += seen[complement] # count the occurances of complement in seen dict and add those to pair count
 
-        seen[i] = seen.get(i, 0) +1
+        seen[i] = seen.get(i, 0) +1 # retrieve value for key from seen dict with default value of 0. Add 1 to that number and store any new values in the seen dict.
     return pair_count
 
 
