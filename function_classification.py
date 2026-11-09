@@ -46,7 +46,7 @@ def process(data):
 import time
 import random
 
-def count_pairs(data): # quadratic
+def count_pairs(data): # Quadratic
     pair_count = 0
     target = 22
     for i in range(len(data)):
@@ -56,7 +56,7 @@ def count_pairs(data): # quadratic
     return pair_count
 
 
-def count_dict_pairs(data): # linear
+def count_dict_pairs(data): # Linear
     seen = {} # capture kv pair (seen:frequency) in dictionary
     pair_count = 0
     target = 22
@@ -91,6 +91,6 @@ for size in sizes:
     print(f"n={size:>6}  |  Quadratic: {t1:.4f}s  |  Linear: {t2:.4f}s")
 
 # Benchmark Output:
-n=  1000  |  Quadratic: 0.0431s  |  Linear: 0.0002s
-n=  5000  |  Quadratic: 1.1765s  |  Linear: 0.0010s
-n= 10000  |  Quadratic: 4.0015s  |  Linear: 0.0017s
+# n=  1000  |  Quadratic: 0.0431s  |  Linear: 0.0002s
+# n=  5000  |  Quadratic: 1.1765s  |  Linear: 0.0010s
+# n= 10000  |  Quadratic: 4.0015s  |  Linear: 0.0017s
