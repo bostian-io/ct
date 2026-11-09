@@ -89,3 +89,8 @@ for size in sizes:
     t2 = benchmark(count_dict_pairs, data)
 
     print(f"n={size:>6}  |  Quadratic: {t1:.4f}s  |  Linear: {t2:.4f}s")
+
+# Benchmark Output:
+n=  1000  |  Quadratic: 0.0431s  |  Linear: 0.0002s
+n=  5000  |  Quadratic: 1.1765s  |  Linear: 0.0010s
+n= 10000  |  Quadratic: 4.0015s  |  Linear: 0.0017s
