@@ -44,8 +44,8 @@ def emails_set(emails):
 def emails_list(emails):
     emails.sort() # O(n log n) time comlexity
     duplicate_emails = []
-    for email in emails:
-        if emails[email] == emails[email] - 1:
+    for email in range(1, len(emails)):
+        if emails[email] == emails[email -1]:
             duplicate_emails.append(emails[email])
     return duplicate_emails
 
@@ -55,3 +55,6 @@ def emails_list(emails):
 # 4GB RAM? - emails_list, because emails_set is a bit more memory intensive because it stores the additional set. Because in this case we are low on memory, that needs to be the priority over speed.
 
 # 64GB RAM? - emails_set, because we have much more memory to manage the additional set, and we are defaulting to prioritizing speed when memory isn't a constraint.
+
+# test_set = ["test1@example.com", "test2@example.com", "test3@example.com", "test1@example.com"]
+# print(emails_list(test_set))
