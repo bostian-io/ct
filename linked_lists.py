@@ -154,8 +154,6 @@ for text in tests:
 
 ## Part 3: Queue: Task Processor
 
-"""Using collections.deque, simulate a simple task processor. Write a TaskProcessor class with add_task(name) and process_next() methods. process_next() should return the oldest unprocessed task (FIFO) or None if empty."""
-
 from collections import deque
 
 class TaskProcessor:
