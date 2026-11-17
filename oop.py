@@ -21,9 +21,9 @@ class Book:
         else:
             return f"{self.title} was not checked out."
 
-    def repr__(self):
+    def __repr__(self):
         status = "Checked out" if self.checked_out else "Available"
-        return f"{self.checked_out} {self.title} {self.author}"
+        return f"[{status}] {self.title} by {self.author}"
 
 class EBook(Book):
     """EBook class represents an electronic book, inheriting from Book"""
@@ -44,7 +44,7 @@ class EBook(Book):
             self.checked_out = self.check_out_count > 0
             return f"{self.title} has been returned. Remaining checkouts: {self.check_out_count}"
 
-    def repr__(self):
+    def __repr__(self):
         status = "Checked out" if self.checked_out else "Available"
         return f"[{status}] {self.title} by {self.author}, {self.year}, File Size: {self.file_size}MB"
 
