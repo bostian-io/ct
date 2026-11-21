@@ -8,21 +8,26 @@ records = [
 ]
 
 def extract_names(records):
+    """Extract names from a list of records."""
     pattern = r"Name:\s*([^|]+?)\s*\|" # search up to the first pipe character, minding whitespaces
     return [re.search(pattern, record).group(1) for record in records]
 
 def extract_emails(records):
+    """Extract email addresses from a list of records."""
     pattern = r"Email:\s*([\S]+)\s*\|"
     return [re.search(pattern, record).group(1) for record in records]
 
 def normalize_phones(records):
+    """Normalize phone numbers to XXX-XXX-XXXX format."""
     return ["-".join(re.search(r"\(?(\d{3})\)?[\s.-]*(\d{3})[\s.-]*(\d{4})", record).groups()) for record in records] #we can use .join and a hypen seperator on the string outputs of the 3 regex groups with this list comprehension
 
 def extract_dates(records):
+    """Extract dates from a list of records."""
     pattern = r"Joined:\s*([\d/.-]+)"
     return [re.search(pattern, record).group(1) for record in records]
 
 def parse_records(records):
+    """Parse records into a list of dictionaries."""
     pattern = (
         r"Name:\s*(?P<name>[^|]+?)\s*\|\s*"
         r"Email:\s*(?P<email>\S+)\s*\|\s*"
@@ -33,6 +38,7 @@ def parse_records(records):
 
 # function tests
 def summary(records):
+    """Generate a summary of extracted information from records."""
     return {
         "names": extract_names(records),
         "emails": extract_emails(records),
