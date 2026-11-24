@@ -12,28 +12,30 @@ data = {
 
 df = pd.DataFrame(data)
 
-print(df.shape)
-print(df.dtypes)
-print(df.head())
-print(df.describe())
-print(df.info())
+# commented for more clear printing of requested QA's
+
+# print(df.shape)
+# print(df.dtypes)
+# print(df.head())
+# print(df.describe())
+# print(df.info())
 
 students_per_course = df.groupby("course")["student"].count()
-print("Number of students in each course:")
+print("How many students are in each course?:")
 print(students_per_course)
 
 average_score_per_course = df.groupby("course")["score"].mean()
-print("\nAverage score per course:")
+print("\nWhat is the average score per course?:")
 print(average_score_per_course)
 
 top_3 = df.sort_values("score", ascending=False).head(3)
-print("\nTop 3 students by score:")
+print("\nWho are the top 3 students by score?:")
 print(top_3)
 
 avg_hours_studied = df.groupby("passed")["hours_studied"].mean() # stores the two bool groups for us to use below
 passed_avg_hours = avg_hours_studied[True]
 failed_avg_hours = avg_hours_studied[False]
-print("\nAverage hours studied for students who passed vs. failed:")
+print("\nWhat is the average hours studied for students who passed vs. failed?")
 print(f"Passed: {passed_avg_hours:.2f} hours")
 print(f"Failed: {failed_avg_hours:.2f} hours")
 
@@ -41,6 +43,6 @@ df["grade"] = pd.cut(df["score"], bins=[0, 70, 80, 90, 101], labels=["F", "C", "
 
 # print(df.head()) # confirm our new column works
 
-grade_distribution = df.groupby(["course", "grade"])["grade"].count()
-print("\nDistribution of grades per course:")
+grade_distribution = df.groupby(["course", "grade"], observed=False)["grade"].count()
+print("\nWhat’s the distribution of grades per course?")
 print(grade_distribution)
