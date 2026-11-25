@@ -95,5 +95,13 @@ def _(df, plt):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    > Adding a small section here to test if the .gitignore in the main directory is actually keeping the Marimo session files out of source control.
+    """)
+    return
+
+
 if __name__ == "__main__":
     app.run()
